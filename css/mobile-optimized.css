@@ -1,0 +1,289 @@
+/* Vedanta Spa - Advanced Mobile Optimizations 
+   Note: Desktop styles preserved exactly as requested. 
+   Mobile rules only apply below 992px/768px. */
+
+/* ============ DESKTOP & SHARED STYLES ============ */
+
+/* Massages Page - Desktop */
+.therapy-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: stretch;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.therapy-image-container {
+    flex: 0 0 45%;
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.therapy-image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.therapy-content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.therapy-content-container h3 {
+    color: var(--gold-primary);
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.therapy-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.therapy-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Services Page - Desktop Table */
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.services-table thead tr {
+    background: rgba(212, 175, 55, 0.15);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.services-table th {
+    padding: 20px;
+    text-align: left;
+    color: var(--gold-primary);
+    font-weight: 600;
+    border-right: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.services-table td {
+    padding: 20px;
+    border-right: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.services-table td:first-child {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.services-table td:nth-child(4) {
+    color: var(--gold-primary);
+    font-weight: 600;
+}
+
+.services-table td:last-child {
+    border-right: none;
+    text-align: center;
+}
+
+/* About Page - Desktop */
+.about-flex-container {
+    display: flex;
+    align-items: stretch;
+    gap: 60px;
+    margin: 0;
+}
+
+.about-content-wrapper {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-content-wrapper h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    margin: 0 0 25px 0;
+    line-height: 1.1;
+    color: var(--gold-primary);
+}
+
+.about-image-wrapper {
+    flex: 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    min-height: 400px;
+    /* Base height for desktop */
+}
+
+.about-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Large container for premium wide view */
+.container-wide {
+    width: 100%;
+    max-width: 1400px !important;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Contact Page Grid - Balanced for Wide Screens */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Form slightly wider for better balance */
+    gap: 80px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+
+/* ============ MOBILE OPTIMIZATIONS (Below 992px) ============ */
+@media (max-width: 992px) {
+
+    /* About Us - Text THEN Image */
+    .about-flex-container {
+        flex-direction: column !important;
+        /* Stack normally: Content (first in DOM) then Image (second in DOM) */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-image-wrapper {
+        width: 100%;
+        min-height: 300px;
+        height: auto;
+    }
+
+    .about-image-wrapper img {
+        height: 300px !important;
+        object-fit: cover;
+    }
+
+    /* Massages - Stacked */
+    .therapy-item,
+    .therapy-item.reverse {
+        flex-direction: column !important;
+        gap: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .therapy-image-container {
+        flex: none;
+        width: 100%;
+    }
+
+    .therapy-image-container img {
+        height: 250px;
+    }
+
+    /* Contact Page - Mobile Stack */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+/* ============ MOBILE OPTIMIZATIONS (Below 768px) ============ */
+@media (max-width: 768px) {
+
+    /* Services Table Card Layout */
+    .services-table thead {
+        display: none;
+    }
+
+    .services-table,
+    .services-table tbody,
+    .services-table tr,
+    .services-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .services-table tr {
+        margin-bottom: 25px;
+        background: rgba(18, 18, 18, 0.9) !important;
+        border: 1px solid rgba(212, 175, 55, 0.2) !important;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .services-table td {
+        text-align: left !important;
+        padding: 10px 0 !important;
+        border: none !important;
+    }
+
+    .services-table td:nth-of-type(1) {
+        font-size: 22px;
+        color: var(--gold-primary);
+        font-family: 'Cinzel', serif;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important;
+        padding-bottom: 15px !important;
+        margin-bottom: 10px;
+    }
+
+    .services-table td:nth-of-type(2):before {
+        content: "Description: ";
+        color: var(--gold-primary);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .services-table td:nth-of-type(3):before {
+        content: "Duration: ";
+        color: var(--gold-primary);
+        font-weight: 600;
+    }
+
+    .services-table td:nth-of-type(4):before {
+        content: "Price: ";
+        color: var(--gold-primary);
+        font-weight: 600;
+    }
+
+    .services-table .btn {
+        width: 100%;
+    }
+
+    .therapy-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Fix Contact Us button wrapping on mobile */
+    .book-btn,
+    .btn,
+    .btn-primary {
+        white-space: nowrap !important;
+    }
+}

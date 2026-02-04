@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Vedanta | Book Your Appointment</title>
+    <meta name="description"
+        content="Contact Vedanta International Wellness Spa. Call us, visit us, or book your appointment online.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/mobile-optimized.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--gold-primary);
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 5px;
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--gold-gradient);
+            color: var(--black);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .contact-info-box {
+            padding: 30px;
+            background: rgba(18, 18, 18, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-box h4 {
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+        }
+
+        .contact-info-box p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .contact-info-box i {
+            color: var(--gold-primary);
+            margin-right: 12px;
+            min-width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="logo-circle">
+                <img src="images/logo.jpg.jpeg" alt="Vedanta Logo">
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo-section">
+                    <a href="index.html" class="logo-container">
+                        <img src="images/logo.jpg.jpeg" alt="Vedanta Spa Logo" class="logo-image">
+                    </a>
+                    <div class="logo-text-container">
+                        <span class="logo-main">VEDANTA</span>
+                        <span class="logo-sub">International Wellness Spa</span>
+                    </div>
+                </div>
+                <nav class="nav-section">
+                    <div class="desktop-nav">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="rooms.html" class="nav-link">Rooms</a>
+                        <a href="massages.html" class="nav-link">Massages</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                    </div>
+                </nav>
+                <div class="action-section">
+                    <a href="contact.html" class="book-btn">Contact Us</a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="main-nav" id="mobileMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="rooms.html" class="nav-link">Rooms</a>
+                <a href="massages.html" class="nav-link">Massages</a>
+                <a href="services.html" class="nav-link">Services</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="top-bar">
+            <div class="marquee-content">
+                <span>✦ Bhubaneswar’s PREMIER LUXURY WELLNESS SANCTUARY ✦</span>
+                <span>✦ AUTHENTIC AYURVEDIC & TRADITIONAL THERAPIES ✦</span>
+                <span>✦ BOOK YOUR PRIVATE Massage session TODAY ✦</span>
+                <span>✦ THE Most PREMIUM LUXURY SPA EXPERIENCE ✦</span>
+            </div>
+        </div>
+
+        <!-- Page Hero -->
+        <section class="hero-page"
+            style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(10, 10, 10, 0.6) 100%), url('images/reception-1.jpeg'); background-size: cover; background-position: center; min-height: 250px;">
+            <div class="hero-content container">
+                <h1 class="shimmer-gold">Get In Touch</h1>
+                <p class="hero-subtitle">We're here to answer your questions and book your sanctuary experience</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <div class="container-wide">
+                <div class="contact-grid stagger-container">
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="shimmer-gold"
+                            style="font-family: 'Cinzel', serif; font-size: 32px; margin-bottom: 30px;">Send us a
+                            Message</h2>
+                        <form onsubmit="handleContactForm(event)">
+                            <div class="form-group">
+                                <label>Your Name *</label>
+                                <input type="text" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label>Service Interested In</label>
+                                <select name="service">
+                                    <option>Select a service</option>
+                                    <option>Thai Massage</option>
+                                    <option>Deep Tissue Massage</option>
+                                    <option>Facial Treatment</option>
+                                    <option>Body Treatment</option>
+                                    <option>Couples Package</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message *</label>
+                                <textarea name="message" required
+                                    placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div>
+                        <h2 class="shimmer-gold"
+                            style="font-family: 'Cinzel', serif; font-size: 32px; margin-bottom: 30px;">Contact Details
+                        </h2>
+
+                        <div class="contact-info-box">
+                            <h4><i class="fas fa-map-marker-alt"></i>Location</h4>
+                            <p>3rd Floor, Space No. 04, 1st Block<br>BMC Bhawani Mall, Saheed Nagar<br>Bhubaneswar,
+                                Odisha - 751007<br>India</p>
+                        </div>
+
+                        <div class="contact-info-box">
+                            <h4><i class="fas fa-phone"></i>Phone</h4>
+                            <p><a href="tel:+917788872255"
+                                    style="color: var(--gold-primary); text-decoration: none;">+91 77888 72255</a></p>
+                            <p><a href="tel:+917559974777"
+                                    style="color: var(--gold-primary); text-decoration: none;">+91 75599 74777</a></p>
+                        </div>
+
+                        <div class="contact-info-box">
+                            <h4><i class="fas fa-envelope"></i>Email</h4>
+                            <p><a href="mailto:info@vedantaspa.com"
+                                    style="color: var(--gold-primary); text-decoration: none;">info@vedantaspa.com</a>
+                            </p>
+                        </div>
+
+                        <div class="contact-info-box">
+                            <h4><i class="fas fa-clock"></i>Hours</h4>
+                            <p><strong>Monday - Friday:</strong> 9:00 AM - 9:00 PM</p>
+                            <p><strong>Saturday:</strong> 9:00 AM - 10:00 PM</p>
+                            <p><strong>Sunday:</strong> 10:00 AM - 8:00 PM</p>
+                        </div>
+
+                        <div class="contact-info-box">
+                            <h4><i class="fas fa-share-alt"></i>Follow Us</h4>
+                            <div class="social-grid" style="margin-top: 15px;">
+                                <a href="https://www.instagram.com/vedanta_wellness_spa/" target="_blank"
+                                    class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="https://wa.me/917788872255" target="_blank" class="social-icon"><i
+                                        class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map or Additional Info -->
+                <div
+                    style="background: rgba(18, 18, 18, 0.8); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 10px; padding: 40px; text-align: center;">
+                    <h3 class="shimmer-gold" style="font-family: 'Cinzel', serif; margin-bottom: 20px;">Why Book With
+                        Vedanta?</h3>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 30px;">
+                        <div>
+                            <div style="font-size: 40px; color: var(--gold-primary); margin-bottom: 15px;"><i
+                                    class="fas fa-star"></i></div>
+                            <h4 style="color: var(--gold-primary); margin-bottom: 10px;">Expert Therapists</h4>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px;">15+ years of experience from
+                                Thailand</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 40px; color: var(--gold-primary); margin-bottom: 15px;"><i
+                                    class="fas fa-spa"></i></div>
+                            <h4 style="color: var(--gold-primary); margin-bottom: 10px;">Premium Experience</h4>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px;">Luxury facilities and private
+                                sanctuaries</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 40px; color: var(--gold-primary); margin-bottom: 15px;"><i
+                                    class="fas fa-leaf"></i></div>
+                            <h4 style="color: var(--gold-primary); margin-bottom: 10px;">Natural Products</h4>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px;">100% natural and organic
+                                ingredients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Vedanta</h3>
+                    <p>Bhubaneswar’s premier luxury wellness sanctuary where ancient traditions converge with modern
+                        indulgence.</p>
+                    <div class="social-grid">
+                        <a href="https://www.instagram.com/vedanta_wellness_spa/" target="_blank" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/917788872255" target="_blank" class="social-icon"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Discover</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Legacy</a></li>
+                        <li><a href="rooms.html">Luxury Rooms</a></li>
+                        <li><a href="massages.html">Therapies</a></li>
+                        <li><a href="services.html">Service Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Bliss</a></li>
+                        <li><a href="contact.html">Find Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>3rd Floor, Space No. 04, 1st Block, BMC Bhawani
+                                Mall, Saheed Nagar, Bhubaneswar, Odisha - 751007</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 77888 72255 | +91 75599 74777</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Vedanta International Wellness Spa. Designed for Absolute Bliss.
+                <br>
+                <span>Powered by <a href="https://fortimark.co" target="_blank" rel="noopener">Fortimark</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleContactForm(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            console.log('Form submitted:', data);
+            alert('Thank you for your message! We will contact you shortly.');
+            event.target.reset();
+        }
+    </script>
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contacts">
+        <a href="tel:+917788872255" class="floating-btn phone" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/917788872255" class="floating-btn whatsapp" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
