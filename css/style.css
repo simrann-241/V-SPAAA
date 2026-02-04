@@ -989,3 +989,38 @@ footer {
         page-break-inside: avoid;
     }
 }
+
+/* ============ DOWNLOAD MENU BUTTON ============ */
+.download-menu-container {
+    margin: 30px 0;
+}
+
+.download-menu-container .btn-primary {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.5s forwards;
+    background: var(--gold-gradient);
+    border: none;
+    padding: 18px 45px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+    color: var(--black);
+}
+
+.download-menu-container .btn-primary i {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.download-menu-container .btn-primary:hover i {
+    transform: translateY(3px);
+}
+
+.download-menu-container .btn-primary:hover {
+    background: var(--gold-light);
+    color: var(--black);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+    transform: translateY(-3px);
+}
